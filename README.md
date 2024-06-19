@@ -1,103 +1,35 @@
 # Big-number-calculator-
-BigNum Calculator
-Table of Contents
-Project Overview
-Features
-Installation
-Usage
-Functions
-Examples
-Contributing
-License
-Project Overview
-The BigNum Calculator is a C-based project designed to perform arithmetic operations on very large numbers (BigNums) using a doubly linked list data structure. This project aims to handle calculations that exceed the storage capacity of standard data types in C, providing accurate results for operations like addition, subtraction, multiplication, division, and exponentiation.
-
-Features
-Addition and Subtraction: Perform basic arithmetic operations on large numbers.
-Multiplication: Efficiently multiply two large numbers.
-Division and Modulus: Divide large numbers and find the remainder.
-Exponentiation: Calculate power of large numbers.
-Doubly Linked List: Use of doubly linked list to store and manipulate large numbers.
-Installation
-To install and run the BigNum Calculator, follow these steps:
-
-Clone the repository:
-
-bash
-Copy code
-git clone https://github.com/your-username/bignum-calculator.git
-Navigate to the project directory:
-
-bash
-Copy code
-cd bignum-calculator
-Compile the source code:
-
-bash
-Copy code
-gcc -o bignum_calculator main.c slice.c apc_evaluation.c dl_operations.c
-Usage
-After compiling the project, you can run the calculator using the following command:
-
-bash
-Copy code
-./bignum_calculator
-The calculator reads expressions from the standard input and processes arithmetic operations on large numbers. Enter your expression and press Enter to see the result.
-
-Functions
-slice.c
-**void slice(char *expression, Dlist_t **var1, Dlist_t var2)
-Parses the input expression and divides it into two large numbers and an operator.
-apc_evaluation.c
-*Dlist_t apc_evaluation_sum(Dlist_t **var1, Dlist_t var2, char operator)
-Performs addition and subtraction of two large numbers.
-*Dlist_t apc_evaluation_mul(Dlist_t **var1, Dlist_t var2, char operator)
-Multiplies two large numbers.
-**void apc_evaluation_power(Dlist_t **var1, Dlist_t var2)
-Calculates the power of a large number.
-**int apc_evaluation_div(Dlist_t **var1, Dlist_t var2, char operator)
-Divides two large numbers or finds the remainder.
-dl_operations.c
-Dlist_t dl_create_node(int val)*
-Creates a new node for the doubly linked list.
-**void dl_insert_first(Dlist_t head, int val)
-Inserts a new node at the beginning of the list.
-*void dl_print_list(Dlist_t head)
-Prints the doubly linked list.
-**void dl_delete_first(Dlist_t head)
-Deletes the first node of the list.
-**void dl_delete_list(Dlist_t head)
-Deletes the entire list.
-Examples
-Here are a few examples of how to use the BigNum Calculator:
-
-Addition:
-
-makefile
-Copy code
-Input: 12345678901234567890 + 98765432109876543210
-Output: 111111111011111111100
-Multiplication:
-
-makefile
-Copy code
-Input: 12345678901234567890 * 98765432109876543210
-Output: 1219326311370217952237463801111263526900
-Exponentiation:
-
-makefile
-Copy code
-Input: 12345678 ^ 2
-Output: 152415765279684
-Contributing
-Contributions are welcome! If you have any suggestions, improvements, or bug fixes, please create a pull request or open an issue.
-
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes.
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature-branch).
-Create a new Pull Request.
-License
+# Description
+* This application performs arithmetic operations on large numbers that cannot be handled by standard data types in C.
+* It supports addition, subtraction, multiplication, division, and power operations on large numbers.
+* The numbers are represented using a doubly linked list to handle the large number of digits efficiently.
+* The application reads an arithmetic expression from the user, parses it, and performs the specified operation on the large numbers.
+# Compilation
+* Requires GCC version > 8.0.
+* Use make for optional compilation automation.
+# Usage
+* Run the program and input the arithmetic expression when prompted.
+* The expression should be in the form of number1 operator number2 (e.g., 12345678901234567890 + 98765432109876543210).
+* The result will be displayed after the computation.
+# Processing
+* The numbers are stored in a doubly linked list where each node contains a part of the large number.
+* The expression is parsed to extract the operator and operands.
+* Different functions are used to perform addition, subtraction, multiplication, division, and power operations on the numbers represented by the linked list.
+* The results are computed and displayed in the correct order.
+# Functions
+# slice
+* Parses the input expression to extract the two large numbers and the operator.
+# apc_evaluation_sum
+* Handles addition and subtraction of large numbers.
+# apc_evaluation_mul
+* Handles multiplication of large numbers.
+# apc_evaluation_div
+* Handles division of large numbers and also calculates the remainder.
+# apc_evaluation_power
+* Handles exponentiation of large numbers.
+# check_greater
+* Compares two large numbers to determine which is greater.
+# dl_operations
+* Contains all the doubly linked list operations, including insertion, deletion, and traversal.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
